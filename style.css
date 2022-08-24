@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(225deg, #092c9e,#9c029c ,#be0049);
+     
+}
+
+.container {
+    position: relative;
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 20px 0;
+}
+
+.container .card {
+    position: relative;
+    height: 250px;
+    display: flex;
+    width: 45%;
+    margin: 20px 0;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.container .card .imgBx {
+    position: absolute;
+    top: 13.5px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(20px);
+    height: calc(100% - 20px);
+    width: calc(100% - 16px);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+    transition: 0.5s ease-in-out;
+}
+
+.container .card:hover .imgBx {
+    height: 150px;
+    width: 150px;
+    left: -75px;
+    top: calc(50% - 75px);
+}
+
+.container .card .imgBx img {
+    max-width: 100px;
+    transition: 0.5s ease-in-out;
+}
+
+.container .card:hover .imgBx img {
+    max-width: 75px;
+
+}
+
+.container .card .content {
+    position: absolute;
+    right: 0;
+    margin-top: 10px;
+    width: calc(100% - 75px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .card .content h3 {
+    color: #ffffff;
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+
+.container .card .content p {
+    margin: 10px;
+    color: #fdfdfd;
+}
+
+.container .card .content a {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 7px 20px;
+    border-radius: 5px;
+    background: rgb(0, 0, 0);
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+}
+
+@media(max-width: 990px) {
+    .container {
+        position: relative;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+ 
+    .container .card {
+        width: 300px;
+        height: auto;
+        flex-direction: column;
+        background-color: transparent;
+        margin: 20px 0px;
+        border-radius: 20px;
+        box-shadow: none;
+    }
+
+    .container .card .imgBx {
+        position: relative;
+        /* From https://css.glass */
+        background: rgba(85, 85, 85, 0.15);
+        border-radius: 16px;
+        box-shadow: 0 5px 45px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .container .card .imgBx,
+    .container .card:hover .imgBx {
+        width: 80%;
+        height: 200px;
+        top: 100px;
+        left: 10%;
+    }
+
+    .container .card:hover .imgBx {
+        top: 75px;
+    }
+
+    .container .card .imgBx img,
+    .container .card:hover .imgBx img {
+        max-width: 100px;
+    }
+
+    .container .card .content {
+        position: relative;
+        width: 100%;
+        border-radius: 20px;
+        padding: 20px 40px 40px;
+        border-top: 85px solid rgba(0, 0, 0, 0.01);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.09);
+    }
+
+}
